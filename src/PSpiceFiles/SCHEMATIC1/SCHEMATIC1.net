@@ -1,0 +1,31 @@
+* source ERGASIATELESTIKOU
+M_Q8         N00458 N00458 VDD VDD pfet  
++ L=1u  
++ W=5u         
+M_Q3         N00499 N00499 VSS VSS nfet  
++ L=1u  
++ W=2.3u         
+M_Q5         I5 N00458 VDD VDD pfet  
++ L=1u  
++ W=1u         
+M_Q6         VOUT N00458 VDD VDD pfet  
++ L=1u  
++ W=5u         
+M_Q1         N00499 0 I5 I5 pfet  
++ L=1u  
++ W=10u         
+M_Q2         N00542 N01346 I5 I5 pfet  
++ L=1u  
++ W=10u         
+M_Q4         N00542 N00499 VSS VSS nfet  
++ L=1u  
++ W=2.3u         
+M_Q7         VOUT N00542 VSS VSS nfet  
++ L=1u  
++ W=15u         
+I_I1         N00458 VSS DC 18udc  
+C_C1         N00542 VOUT  0.5p  TC=0,0 
+C_C2         0 VOUT  2p  TC=0,0 
+V_V1         VDD 0 1.8Vdc
+V_V2         VSS 0 -1.8Vdc
+V_V3         N01346 0 DC 0Vdc AC 1Vac 

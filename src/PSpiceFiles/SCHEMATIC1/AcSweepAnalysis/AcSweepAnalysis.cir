@@ -1,0 +1,21 @@
+** Profile: "SCHEMATIC1-AcSweepAnalysis"  [ C:\ORCAD\Ergasia\ErgasiaTelestikou-PSpiceFiles\SCHEMATIC1\AcSweepAnalysis.sim ] 
+
+** Creating circuit file "AcSweepAnalysis.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ergasiatelestikou-pspicefiles/nfet.lib" 
+.LIB "../../../ergasiatelestikou-pspicefiles/pfet.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 400 0.1 1g
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

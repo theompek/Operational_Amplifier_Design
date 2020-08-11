@@ -1,0 +1,175 @@
+
+**** 05/15/16 09:19:23 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-AcSweepAnalysis"  [ C:\ORCAD\Ergasia\ErgasiaTelestikou-PSpiceFiles\SCHEMATIC1\AcSweepAnalysis.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "AcSweepAnalysis.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ergasiatelestikou-pspicefiles/nfet.lib" 
+.LIB "../../../ergasiatelestikou-pspicefiles/pfet.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 400 0.1 1g
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ERGASIATELESTIKOU
+M_Q8         N00458 N00458 VDD VDD pfet  
++ L=1u  
++ W=5u         
+M_Q3         N00499 N00499 VSS VSS nfet  
++ L=1u  
++ W=2.3u         
+M_Q5         I5 N00458 VDD VDD pfet  
++ L=1u  
++ W=1u         
+M_Q6         VOUT N00458 VDD VDD pfet  
++ L=1u  
++ W=5u         
+M_Q1         N00499 0 I5 I5 pfet  
++ L=1u  
++ W=10u         
+M_Q2         N00542 N01346 I5 I5 pfet  
++ L=1u  
++ W=10u         
+M_Q4         N00542 N00499 VSS VSS nfet  
++ L=1u  
++ W=2.3u         
+M_Q7         VOUT N00542 VSS VSS nfet  
++ L=1u  
++ W=15u         
+I_I1         N00458 VSS DC 18udc  
+C_C1         N00542 VOUT  0.5p  TC=0,0 
+C_C2         0 VOUT  2p  TC=0,0 
+V_V1         VDD 0 1.8Vdc
+V_V2         VSS 0 -1.8Vdc
+V_V3         N01346 0 DC 0Vdc AC 1Vac 
+
+**** RESUMING AcSweepAnalysis.cir ****
+.END
+
+**** 05/15/16 09:19:23 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-AcSweepAnalysis"  [ C:\ORCAD\Ergasia\ErgasiaTelestikou-PSpiceFiles\SCHEMATIC1\AcSweepAnalysis.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               nfet            pfet            
+               NMOS            PMOS            
+       LEVEL    3               3            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+          LD  164.700000E-09   22.000000E-09 
+         VTO     .786            .9056       
+          KP   96.379000E-06   29.352000E-06 
+       GAMMA     .5863           .4863       
+         PHI     .6              .6          
+      LAMBDA    0               0            
+         RSH   85.45          104.7          
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .85         
+        PBSW     .8              .85         
+          CJ  385.410000E-06  484.470000E-06 
+        CJSW  139.400000E-12  164.570000E-12 
+          MJ    1.1854           .5027       
+        MJSW     .125195         .217168     
+        CGSO  402.410000E-12   53.752000E-12 
+        CGDO  402.410000E-12   53.752000E-12 
+        CGBO  361.440000E-12  336.500000E-12 
+        NSUB   16.160000E+15   18.900000E+15 
+         NFS    5.000000E+12    3.460000E+12 
+         TOX   21.200000E-09   21.200000E-09 
+          XJ  200.000000E-09  200.000000E-09 
+          UO  591.7           180.2          
+       UCRIT   10.000000E+03   10.000000E+03 
+        VMAX  208.200000E+03  373.200000E+03 
+       DELTA     .6967          1.52         
+       THETA     .08122          .1248       
+         ETA     .07066          .1641       
+       KAPPA     .1396          9.694        
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 05/15/16 09:19:23 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-AcSweepAnalysis"  [ C:\ORCAD\Ergasia\ErgasiaTelestikou-PSpiceFiles\SCHEMATIC1\AcSweepAnalysis.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   I5)    -.7296  (  VDD)    1.8000  (  VSS)   -1.8000  ( VOUT)    -.3908      
+
+(N00458)    1.6677 (N00499)    -.9431 (N00542)    -.9431 (N01346)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.230E-04
+    V_V2         1.230E-04
+    V_V3         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.43E-04  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/15/16 09:19:23 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-AcSweepAnalysis"  [ C:\ORCAD\Ergasia\ErgasiaTelestikou-PSpiceFiles\SCHEMATIC1\AcSweepAnalysis.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .30
+
